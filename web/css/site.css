@@ -1,0 +1,362 @@
+html,
+body {
+    height: 100%;
+    font-family:Trebuchet MS;
+}
+
+/*Наш CSS*/
+/*Модальное окно раньше z-index был 1040*/
+.modal-backdrop {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 10;
+    background-color: #000;
+}
+
+.start-list-tr{
+  margin-top: 50%;
+  border-radius: 10px;
+  max-height: 340px;
+}
+
+.bg{
+  background: url('../image/bg1.jpg') no-repeat;
+  background-size: 100%;
+}
+
+.caption-arhiv{
+  color: white;
+  font-size: 30px;
+}
+
+.caption-arhiv +.start-list-tr{
+  margin: 0;
+}
+
+#my_button_submit {
+    position: relative;
+    bottom: 40px;
+}
+
+.rabotay {
+  z-index: 1031;
+  position: relative;
+  top:8px;
+}
+
+.row{
+  margin-top: 10px;
+}
+
+.list-group-item {
+  white-space: pre-wrap;
+}
+
+.navbar-right>li:last-child{  /*Отступ "Выход" справа 15px*/
+  margin-right: 15px;
+}
+
+.nav .badge{  /*Кол-во сообщений у Текущей трансляции у меню*/
+  color: #222222;
+  padding: 3px 6px;
+}
+
+.list-group>.list-group-item>.badge{ /*Время у сообщения*/
+  padding: 5px 8px;
+  color: #222222;
+  background: #F5f5f5;
+  user-select: none;
+  cursor: default;
+}
+.list-group>.list-group-item .redac,  /*Кнопки "удалить" и "редактировать"*/
+.list-group>.list-group-item .del{
+  cursor: pointer;
+}
+
+.list-group>.list-group-item>span:last-child{ /*Отступ времени сообщения от других кнопок*/
+  margin-right: 20px;
+}
+
+.list-group>.list-group-item>.badge:active>.glyphicon{ /*Анимация нажатия на кнопки "удалить" и "редактировать"*/
+  position: relative;
+  top: 2px;
+  left: 2px;
+}
+
+.list-group>.list-group-item>.important{ /*Цвет важного сообщения*/
+  background: #6495ED;
+}
+
+.list-group>.list-group-item>.most-important{ /*Цвет очень важного сообщения*/
+  background: #CD5C5C;
+}
+
+textarea.form-control{
+  height: 100px;
+  resize: none;
+  margin-bottom: 10px;
+}
+
+.my-input{
+  position: relative;
+  bottom: 50px;
+  float: right;
+}
+
+form label{
+  margin-right: 10px;
+}
+
+form #time-message{
+  margin-left: 100px;
+}
+
+.my_dropdown-menu{  /*Двойное выпадающее меню*/
+  list-style: none;
+  position: absolute;
+  left: 100%;
+  top: 0;
+  width: 100%;
+  padding-left: 0px;
+  background: white;
+  border: 1px solid #C5C5C5;
+  box-shadow: 3px 0 3px #EAEAEA,0 6px 6px #EAEAEA ;
+  display: none;
+}
+
+.my_dropdown-menu li:nth-child(2){
+  background: lightgreen;
+}
+.my_dropdown-menu li:nth-child(3){
+  background: red;
+}
+.my_dropdown-menu li:nth-child(4){
+  background: orange;
+}
+
+.my-dropdown:hover .my_dropdown-menu{  /*Появление двойное выпадающее меню*/
+  display: block;
+}
+
+.my_dropdown-menu li a{  /*Чтобы ссылки в двойном выпадающем меню*/
+  color: #262626;
+  display: inline-block;
+  width: 100%;
+  padding: 4px 20px;
+}
+
+.my_dropdown-menu li:hover{  /*Наведение на элементы двойного выпадающего меню (в списке трансляций)*/
+  background: #F5F5F5;
+}
+
+.my_dropdown-menu li a:hover{ /*Отмена бутстраповского стиля при наведении на ссылки (в двойном выпадающем меню)*/
+  text-decoration: none;
+}
+
+li{  /*Чтобы двойное выпадающее меню нормально работало*/
+  position: relative;
+}
+
+.my-input-text{  /*Размер счета у команды (чтобы не занимал половину ширины блока)*/
+  width: 90px !important;
+}
+
+.my-input-group button{  /*Картинки у игроков, героев, команды*/
+  border-radius: 0px;
+}
+
+.my_dropdown-menu-team2{
+  position: absolute;
+  left: -549px;
+}
+
+
+.my_dropdown-menu-team li{  /*Выпадающая поле (настройки команды)*/
+  width: 655px;
+  background: lightgray;
+  height: 290px;
+}
+
+.my_dropdown-menu-team form{  /*Ширина формы в настройках команды*/
+  width: 1000px;
+
+}
+
+.my_dropdown-menu-team input[type="submit"]{ /*Отступ кнопки "Подтвердить" в настройках команды*/
+  margin: 20px 15px 0 0;
+}
+
+.moz{
+  width: 60px !important;
+}
+@-moz-document url-prefix(){ /*Костыль для мозилы*/
+  .list-group span{
+    position: relative;
+    bottom: 20px;
+  }
+  input[type="time"]{
+  width: 50px;
+}
+}
+
+.pre-scrollable{
+margin-top: 20px;
+height: 340px !important;
+}
+
+max-height:712px{
+.pre-scrollable{
+height: 324px !important;
+}
+}
+
+.glyphicon-trash{
+color: #222222;
+text-decoration: none;
+}
+
+.glyphicon-trash:hover{
+color: #222222;
+text-decoration: none;
+}
+
+.kostil{
+  border-radius: 0 4px 4px 0;
+  border-left: none;
+}
+
+.kostil2{
+  border-radius: 0;
+}
+
+.my-row{
+  margin-top: -10px;
+}
+
+.my-input{
+  position: relative;
+  bottom: 50px;
+}
+
+/*.footer{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}*/
+
+
+/*Конец нашей CSS*/
+
+/*.wrap {
+    min-height: 100%;
+    height: auto;
+    margin: 0 auto -60px;
+    padding: 0 0 60px;
+}*/
+
+.wrap > .container {
+    padding: 70px 15px 20px;
+}
+
+.footer {
+    height: 60px;
+    background-color: #f5f5f5;
+    border-top: 1px solid #ddd;
+    padding-top: 20px;
+}
+
+.jumbotron {
+    text-align: center;
+    background-color: transparent;
+}
+
+.jumbotron .btn {
+    font-size: 21px;
+    padding: 14px 24px;
+}
+
+.not-set {
+    color: #c55;
+    font-style: italic;
+}
+
+/* add sorting icons to gridview sort links */
+a.asc:after, a.desc:after {
+    position: relative;
+    top: 1px;
+    display: inline-block;
+    font-family: 'Glyphicons Halflings';
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+    padding-left: 5px;
+}
+
+a.asc:after {
+    content: /*"\e113"*/ "\e151";
+}
+
+a.desc:after {
+    content: /*"\e114"*/ "\e152";
+}
+
+.sort-numerical a.asc:after {
+    content: "\e153";
+}
+
+.sort-numerical a.desc:after {
+    content: "\e154";
+}
+
+.sort-ordinal a.asc:after {
+    content: "\e155";
+}
+
+.sort-ordinal a.desc:after {
+    content: "\e156";
+}
+
+.grid-view th {
+    white-space: nowrap;
+}
+
+.hint-block {
+    display: block;
+    margin-top: 5px;
+    color: #999;
+}
+
+.error-summary {
+    color: #a94442;
+    background: #fdf7f7;
+    border-left: 3px solid #eed3d7;
+    padding: 10px 20px;
+    margin: 0 0 15px 0;
+}
+
+/* align the logout "link" (button in form) of the navbar */
+.nav li > form > button.logout {
+    padding: 15px;
+    border: none;
+}
+
+@media(max-width:767px) {
+    .nav li > form > button.logout {
+        display:block;
+        text-align: left;
+        width: 100%;
+        padding: 10px 15px;
+    }
+}
+
+.nav > li > form > button.logout:focus,
+.nav > li > form > button.logout:hover {
+    text-decoration: none;
+}
+
+.nav > li > form > button.logout:focus {
+    outline: none;
+}
